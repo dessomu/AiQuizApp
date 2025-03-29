@@ -39,13 +39,13 @@ function App() {
           method: "POST",
           headers: {
             Authorization:
-              "Bearer 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",
+              "Bearer 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",
             "HTTP-Referer": "https://freequickquizapp.netlify.app/", // Optional. Site URL for rankings on openrouter.ai.
             "X-Title": "QuickQuizApp", // Optional. Site title for rankings on openrouter.ai.
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "deepseek/deepseek-chat-v3-0324:free",
+            model: "deepseek/deepseek-r1:free",
             messages: [
               {
                 role: "user",
