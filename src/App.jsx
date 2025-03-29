@@ -15,8 +15,7 @@ function App() {
   const { questions, setQuestions } = useContext(UseContext);
   const { quizStarted, setQuizStarted } = useContext(UseContext);
 
-  // const apiKey = import.meta.env.VITE_API_KEY;
-  // console.log(apiKey);
+  const apiKey = import.meta.env.VITE_API_KEY;
   
 
   async function generateQuiz() {
@@ -36,7 +35,7 @@ function App() {
    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer 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",
+          "Authorization": `Bearer ${apiKey}`,
           "HTTP-Referer": "https://freequickquizapp.netlify.app/", // Optional. Site URL for rankings on openrouter.ai.
           "X-Title": "qucickquiz", // Optional. Site title for rankings on openrouter.ai.
           "Content-Type": "application/json"
