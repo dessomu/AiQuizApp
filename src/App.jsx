@@ -39,7 +39,7 @@ function App() {
           method: "POST",
           headers: {
             Authorization:
-              "Bearer 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",
+              "Bearer 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",
             "HTTP-Referer": "https://freequickquizapp.netlify.app/", // Optional. Site URL for rankings on openrouter.ai.
             "X-Title": "QuickQuizApp", // Optional. Site title for rankings on openrouter.ai.
             "Content-Type": "application/json",
