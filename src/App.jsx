@@ -15,7 +15,7 @@ function App() {
   const { questions, setQuestions } = useContext(UseContext);
   const { quizStarted, setQuizStarted } = useContext(UseContext);
 
-  const apiKey = import.meta.env.VITE_API_KEY;
+  // const apiKey = import.meta.env.VITE_API_KEY;
   // console.log(apiKey);
   
 
@@ -39,7 +39,7 @@ function App() {
           method: "POST",
           headers: {
             Authorization:
-              `Bearer ${apiKey}`,
+              "Bearer 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",
             "HTTP-Referer": "https://somnathbaidya.netlify.app/", // Optional. Site URL for rankings on openrouter.ai.
             "X-Title": "portfolio", // Optional. Site title for rankings on openrouter.ai.
             "Content-Type": "application/json",
