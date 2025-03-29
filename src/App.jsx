@@ -33,28 +33,24 @@ function App() {
         correct: "index"
       }]`;
 
-      const response = await fetch(
-        "https://openrouter.ai/api/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            Authorization:
-              "Bearer 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",
-            "HTTP-Referer": "https://freequickquizapp.netlify.app/", // Optional. Site URL for rankings on openrouter.ai.
-            "X-Title": "QuickQuizApp", // Optional. Site title for rankings on openrouter.ai.
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model: "deepseek/deepseek-r1:free",
-            messages: [
-              {
-                role: "user",
-                content: prompt,
-              },
-            ],
-          }),
-        }
-      );
+   const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer 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",
+          "HTTP-Referer": "https://freequickquizapp.netlify.app/", // Optional. Site URL for rankings on openrouter.ai.
+          "X-Title": "qucickquiz", // Optional. Site title for rankings on openrouter.ai.
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          "model": "deepseek/deepseek-r1:free",
+          "messages": [
+            {
+              "role": "user",
+              "content": prompt,
+            }
+          ]
+        })
+      });
 
       const data = await response.json();
       const markdownText =
