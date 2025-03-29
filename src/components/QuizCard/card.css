@@ -1,0 +1,219 @@
+.card-container{
+    width: 100%;
+    padding: 80px 0 0;
+    height: 100dvh;
+    max-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(244, 242, 242,0.8) ;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+.card{
+    width: 40dvw;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    border-radius: 15px; /* Rounded corners */
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+}
+.quiz-status{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.question-status{
+    width: fit-content;
+    border: solid transparent;
+    border-radius: 30px;
+    padding: 4px 10px;
+    background-color: #e0e5f1;
+    color: #5483ef;
+    font-size: 15px;
+    font-weight: 500;
+}
+.answer-status{
+    width: fit-content;
+    border: solid transparent;
+    border-radius: 30px;
+    padding: 4px 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+/* incorrect text-#a23737, back-#fee2e1 */
+/* correct text-#238d4c, back-#d2eedc */
+.question{
+    width: 100%;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight:600;
+    color:rgba(0,0,0,0.65);
+    letter-spacing: 1.3;
+    line-height: 1.3;
+    padding: 0 5px;
+}
+.options{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 24px;
+}
+.option{
+    width: 100%;
+    margin: 12px 0 0;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    padding: 16px;
+    border: solid 1px rgba(0, 0, 0,0.1);
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease-in-out;
+}
+.option:hover{
+    transform: scale(1.02);
+}
+.option .no{
+    width:24px;
+    height:24px;
+    background-color:#e2e7eb;
+    border-radius:50%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #475569;
+}
+.answer{
+    display: none;
+    width: 100%;
+    margin: 12px 0 0;
+    gap: 12px;
+    padding: 16px;
+    border: solid 1px rgba(0, 0, 0,0.1);
+    border-radius: 0.75rem;
+    text-align: left;
+}
+.answer p{
+    font-size: 15px;
+    color: #475569;
+}
+.next{
+    padding: 10px 20px;
+    margin: 16px 0 0 ;
+    border: solid transparent;
+    border-radius: 10px;
+    background: #3264d9;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+}
+@media (300px < width <= 425px) {
+    .card-container{
+        padding: 0;
+    }
+    .card{
+        width: 80%;
+        padding: 20px;
+        gap: 5px;
+        margin-top: -40px;
+    }
+    .question{
+        font-size: large;
+        line-height: 1.1;
+    }
+    .options{
+        margin: 0 0 15px;
+    }
+    .option{
+        padding: 8px;
+    }
+    .option span{
+        font-size: 0.85rem;
+    }
+    .answer{
+        padding: 10px;
+        margin: 8px 0 0 ;
+    }
+    .next{
+        padding: 8px 12px;
+        margin: 12px 0 0 ;
+    }
+}
+
+
+@media (425px < width <= 640px) {
+    .card-container{
+        padding: 0;
+    }
+    .card{
+        width: 80%;
+        padding: 25px;
+        gap: 10px;
+        margin-top: -40px;
+    }
+    .question{
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+    .options{
+        margin: 0 0 20px;
+    }
+    .option{
+        padding: 13px;
+    }
+    .option span{
+        font-size: 1rem;
+    }
+    .answer{
+        padding: 15px;
+        margin: 10px 0 0 ;
+    }
+    .next{
+        padding: 10px 15px;
+        margin: 12px 0 0 ;
+        font-size: large;
+    }
+}
+
+@media (640px < width <= 1024px) {
+    .card-container{
+        padding: 0;
+    }
+    .card{
+        width: 80%;
+        padding: 30px;
+        gap: 15px;
+        margin-top: -30px;
+    }
+    .question{
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    .options{
+        margin: 0 0 22px;
+    }
+    .option{
+        padding: 15px;
+    }
+    .option span{
+        font-size: 1.1rem;
+    }
+    .answer{
+        padding: 16px;
+        margin: 12px 0 0 ;
+    }
+    .next{
+        padding: 12px 18px;
+        margin: 15px 0 0 ;
+        font-size: larger;
+    }
+}

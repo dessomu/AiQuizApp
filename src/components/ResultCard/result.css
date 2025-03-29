@@ -1,0 +1,260 @@
+.result-container{
+    width: 100%;
+    height: 100dvh;
+    padding: 80px 0 0;
+  background-color:rgb(244, 242, 242,0.8) ;
+}
+/* Container */
+.result-card {
+    width: 35dvw;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border */
+    padding: 40px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Headings */
+  .result-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .result-topic {
+    font-size: 1rem;
+    color: #69768b;
+    margin-bottom: 20px;
+  }
+  
+  .ring-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100px;         /* Adjust size as needed */
+    height: 100px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  .ring {
+    width: 100%;         /* Adjust size as needed */
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#f6f5f5 /* Smooth gradient change */
+  }
+  
+  /* Percentage text in the center of the ring */
+  .percentage-text {
+    position: absolute;
+    font-size: 1rem;  /* Adjust font size */
+    font-weight: bold;
+    color: #2d3748;   /* Text color */
+  }
+  
+  /* Encouragement & Score Text */
+  .encouragement {
+    font-size: large;
+    font-weight: 600;
+    color: #2f3642;
+    margin-top: 20px ;
+  }
+  
+  .score-text {
+    font-size: 1rem;
+    color: #69768b;
+    margin-bottom: 20px;
+  }
+  
+  /* Analysis Box */
+  .analysis-box {
+    width: 100%;
+    background: #eff6ff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: solid 1.5px #c7e0fd ;
+    color: #2563eb;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+  }
+  .analysis-box span{
+    font-size: 0.95rem;
+    color: #1d4ed8;
+    font-weight: 600;
+  }
+  
+  /* Start New Quiz Button */
+  .start-quiz-btn {
+    background: #5483ef;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .start-quiz-btn:hover {
+    background: #3264d9;
+  }
+
+
+ @media (300px < width <= 425px) {
+  .result-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-card{
+    width: 80%;
+    padding: 20px;
+    gap: 5px;
+  }
+  .result-title{
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .result-topic{
+    font-size: 0.85rem;
+    margin: 0 0 10px;
+  }
+  .ring-container{
+    width: 80px;
+    height: 80px;
+  }
+  .encouragement{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 10px 0 0;
+  }
+  .score-text{
+    font-size: small;
+    margin: 0 0 10px;
+  }
+  .analysis-box{
+    font-size: 0.85rem;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .analysis-box span{
+    font-size: 0.8rem;
+  }
+  .analysis-box p{
+    font-size: small;
+  }
+  .start-quiz-btn{
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+ } 
+  
+ @media (425px < width <= 640px) {
+  .result-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-card{
+    width: 75%;
+    padding: 25px;
+    gap: 10px;
+  }
+  .result-title{
+    font-size: 1.3rem;
+    margin: 0 0 5px;
+  }
+  .result-topic{
+    font-size: 1rem;
+    margin: 0 0 12px;
+  }
+  .ring-container{
+    width: 90px;
+    height: 90px;
+  }
+  .encouragement{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 12px 0 0;
+  }
+  .score-text{
+    font-size: 1rem;
+    margin: 0 0 13px;
+  }
+  .analysis-box{
+    padding: 10px;
+    margin-bottom: 13px;
+  }
+  .analysis-box span{
+    font-size: 0.85rem;
+  }
+  .analysis-box p{
+    font-size: medium;
+  }
+  .start-quiz-btn{
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+ } 
+
+ @media (640px < width <= 1024px) {
+  .result-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-card{
+    width: 65%;
+    padding: 30px;
+    gap: 15px;
+  }
+  .result-title{
+    font-size: 1.5rem;
+    margin: 0 0 8px;
+  }
+  .result-topic{
+    font-size: 1.2rem;
+    margin: 0 0 15px;
+  }
+  .ring-container{
+    width: 95px;
+    height: 95px;
+  }
+  .encouragement{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0 0;
+  }
+  .score-text{
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+  }
+  .analysis-box{
+    padding: .8rem;
+    margin-bottom: 1rem;
+  }
+  .analysis-box span{
+    font-size: 0.95rem;
+  }
+  .analysis-box p{
+    font-size: 1rem;
+  }
+  .start-quiz-btn{
+    padding: 15px 20px;
+    font-size: 1.15rem;
+  }
+ } 
